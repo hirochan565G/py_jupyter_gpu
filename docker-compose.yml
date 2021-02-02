@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  pyjupytergpu:
+    build: .
+    ports:
+    - '8888:8888'
+    user: '${UID}:${GID}'
+    volumes:
+    - './code:/code'
+
+
+    tty: true
+    stdin_open: true
